@@ -1,0 +1,73 @@
+<header class="bg-white py-6 fixed top-0 left-0 right-0 flex justify-between items-center px-2 md:pb-14 md:w-full xl:w-11/12 md:px-8 pc:w-[1400px] pc:mx-auto pc:px-2">
+  
+    <img src="icons/logo.svg" class="w-8 h-6" alt="Logo">
+    
+  
+    <nav class="hidden md:flex gap-8 text-gray-400 md:ml-6 ">
+      <a href="#" class="text-center text-lg hover:text-orange-400 cursor-pointer">Home</a>
+      <a href="#" class="text-center text-lg hover:text-orange-400 cursor-pointer ">New</a>
+      <a href="#" class="text-center text-lg hover:text-orange-400 cursor-pointer">Popular</a>
+      <a href="#" class="text-center text-lg hover:text-orange-400 cursor-pointer">Trending</a>
+      <a href="#" class="text-center text-lg hover:text-orange-400 cursor-pointer">Categories</a>
+    </nav>
+  
+    
+    <button id="btnOpen" class="md:hidden">
+      <img class="w-10" src="icons/icon-menu.svg" alt="Abrir Menú">
+    </button>
+  </header>
+  
+  
+  <aside class="hidden bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm md:hidden" id="bg"></aside>
+  
+  
+  <nav id="navMovil" class="w-0 bg-white min-h-screen fixed top-0 right-0  transition-all duration-200">
+    <div class="flex pt-3 flex-col gap-20">
+      <button class="m-3 ml-auto " id="btnClose">
+        <img src="icons/icon-menu-close.svg" class="w-7" alt="Close menu">
+      </button>
+      <div  class="flex pt-3 flex-col items-start ml-6">
+      <a href="#" class="text-center text-xl hover:text-orange-400 cursor-pointer  mb-4">Home</a>
+      <a href="#" class="text-center text-xl hover:text-orange-400 cursor-pointer  mb-4">New</a>
+      <a href="#" class="text-center text-xl hover:text-orange-400 cursor-pointer  mb-4">Popular</a>
+      <a href="#" class="text-center text-xl hover:text-orange-400 cursor-pointer  mb-4">Trending</a>
+      <a href="#" class="text-center text-xl hover:text-orange-400 cursor-pointer  mb-4">Categories</a>
+    </div>
+    </div>
+  </nav>
+  
+  
+  <script>
+  
+    const btnOpen = document.querySelector('#btnOpen')
+    const btnClose = document.querySelector('#btnClose')
+    const nav = document.querySelector('#navMovil')
+    const aside = document.querySelector('#bg')
+  
+  
+    btnOpen?.addEventListener('click', () => {
+      nav?.classList.add('class', 'w-3/4')
+      aside?.classList.remove('class', 'hidden')
+  
+    })
+  
+  
+      btnClose?.addEventListener('click', () => {
+        aside?.classList.add('class', 'hidden')
+        nav?.classList.remove('class', 'w-3/4')
+        
+  
+      })
+  
+      aside?.addEventListener('click', () => {
+        aside?.classList.add('class', 'hidden')
+        nav?.classList.remove('class', 'w-3/4')
+        
+  
+      })
+    
+  
+    
+    
+  
+  </script>
