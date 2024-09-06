@@ -7,5 +7,5 @@ export default defineConfig({
   integrations: [tailwind()],
  
   site: 'https://EJCP3.github.io',
-  base: '/News-homepage',
+  base: '/News-homepage_',
 });
